@@ -1,6 +1,5 @@
 #Imports
 import ex06
-#CPF valitation with RegEX
 
 #Client class - read and update data
 class Client():
@@ -58,6 +57,7 @@ while True:
         if cep != '':
             client1.set_cep(cep=cep)
         if cpf != '':
+            #CPF valitation with RegEX
             if ex06.validate_cpf(cpf=cpf):
                 client1.set_cpf(cpf=cpf)
             
