@@ -1,32 +1,34 @@
-"""
-Criar um programa com Classes e Objetos que tenha um método chamado “contaPrimos( )”.
- Este método recebe como parâmetro dois números inteiros positivos, sendo o primeiro menor do que o segundo. 
- O retorno do método será a quantidade de números primos encontrados do primeiro ao segundo valor informado. 
- 
- Ex: (‘obj’ é um objeto qualquer a escolha do aluno) x = obj.contaPrimos(5, 20) → x terá o valor 6, já que de 5 até 20 existem seis números primos.
-"""
-
 class Numbers():
     def __init__(self,number1, number2) -> None:
         self.number1 = number1
         self.number2 = number2
 
-    def calculo(self, number1, number2):
-        if number1 > number2:
-            _ = number1
-            number1 = number2
-            number2 = _
+    def calculation(self):
+        if self.number1 > self.number2:
+            _ = self.number1
+            self.number1 = self.number2
+            self.number2 = _
+
+        def isPrimo(number):
+            if number <= 1:
+                return False
+            if number <= 3:
+                return True
+            if number % 2 == 0 or number % 3 == 0:
+                return False
+            i = 5
+            while i * i <= number:
+                if number % i == 0 or number % (i + 2) == 0:
+                    return False
+                i += 6
+            return True
+    
+        primos = []
+        for number in range(max(2, self.number1), self.number2):
+            if isPrimo(number):
+                primos.append(number)
+        return primos
 
         
-
-
-
-
-
-
-
-
-"""
-primo -
-numero divisivel por 1 e por ele mesmo
-"""
+numbers = Numbers(5,20)
+print(numbers.calculation())
