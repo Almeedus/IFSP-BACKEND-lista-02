@@ -1,10 +1,3 @@
-"""
-Criar um programa que exiba o resultado das operações soma, subtração,
-multiplicação, radiciação e fatorial com o uso de objetos e métodos.
- 
-Para o cálculo do fatorial, procure usar métodos recursivos.
-"""
-
 class Operations():
     def __init__(self) -> None:
         pass
