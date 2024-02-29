@@ -1,3 +1,4 @@
+#Here I'm only import the pi value (3.1415...)
 from math import pi
 
 class Calculation():
