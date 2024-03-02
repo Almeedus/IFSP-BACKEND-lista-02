@@ -20,11 +20,7 @@ class Calculation():
                 return 0.5 * base * height
         
         elif len(args) == 3:
-            if all(isinstance(arg, int) for arg in args):
-                sideA, sideB, sideC = args
-                return sideA + sideB + sideC
-
-            elif all(isinstance(arg, tuple) and len(arg) == 2 for arg in args):
+            if all(isinstance(arg, tuple) and len(arg) == 2 for arg in args):
                 x1, y1 = args[0]
                 x2, y2 = args[1]
                 x3, y3 = args[2]
